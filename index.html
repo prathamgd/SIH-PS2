@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MindBridge - Student Mental Health Platform</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <style>
         * {
             margin: 0;
@@ -28,7 +29,7 @@
 
         /* Header */
         .header {
-            background: #9F8FAD; /* Mindful Mauve - Accent */
+            background: #E89D9D; /* Hopeful Coral - NEW Accent */
             color: #F8F5F2; /* Calm Beige for text on accent */
             padding: 1rem 2rem;
             display: flex;
@@ -45,8 +46,10 @@
         }
 
         .logo::before {
-            content: "🌉";
-            margin-right: 0.5rem;
+            content: "\F4B1"; /* Bootstrap Icon for 'heart' */
+            font-family: "bootstrap-icons";
+            margin-right: 0.75rem;
+            vertical-align: middle;
         }
 
         .nav-menu {
@@ -66,7 +69,7 @@
 
         .nav-btn:hover, .nav-btn.active {
             background: #F8F5F2;
-            color: #9F8FAD;
+            color: #E89D9D;
         }
 
         /* Main Content Area */
@@ -103,6 +106,7 @@
         .welcome-icon {
             font-size: 4rem;
             margin-bottom: 1rem;
+            color: #E89D9D;
         }
 
         .welcome-title {
@@ -134,7 +138,7 @@
         }
 
         .cta-button {
-            background: #9F8FAD; /* Mindful Mauve - Accent & Buttons */
+            background: #E89D9D; /* Hopeful Coral */
             color: #F8F5F2;
             border: none;
             padding: 1rem 2rem;
@@ -143,12 +147,12 @@
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s;
-            box-shadow: 0 4px 15px rgba(159, 143, 173, 0.4);
+            box-shadow: 0 4px 15px rgba(232, 157, 157, 0.4);
         }
 
         .cta-button:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(159, 143, 173, 0.6);
+            box-shadow: 0 8px 25px rgba(232, 157, 157, 0.6);
         }
 
         /* Assessment Screen */
@@ -168,7 +172,7 @@
 
         .progress-fill {
             height: 100%;
-            background: #9F8FAD; /* Mindful Mauve */
+            background: #E89D9D; /* Hopeful Coral */
             transition: width 0.3s ease;
         }
 
@@ -178,11 +182,11 @@
             padding: 2rem;
             margin-bottom: 2rem;
             box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            border-left: 5px solid #9F8FAD; /* Mindful Mauve */
+            border-left: 5px solid #E89D9D; /* Hopeful Coral */
         }
 
         .question-number {
-            color: #9F8FAD; /* Mindful Mauve */
+            color: #E89D9D; /* Hopeful Coral */
             font-size: 0.9rem;
             font-weight: 600;
             margin-bottom: 0.5rem;
@@ -214,12 +218,12 @@
 
         .option:hover {
             background: #EFEAE4; /* Soft Linen */
-            border-color: #9F8FAD; /* Mindful Mauve */
+            border-color: #E89D9D; /* Hopeful Coral */
         }
 
         .option.selected {
             background: #EFEAE4; /* Soft Linen */
-            border-color: #9F8FAD; /* Mindful Mauve */
+            border-color: #E89D9D; /* Hopeful Coral */
             color: #3E3E3E;
         }
 
@@ -256,7 +260,7 @@
         }
 
         .nav-button.primary {
-            background: #9F8FAD; /* Mindful Mauve */
+            background: #E89D9D; /* Hopeful Coral */
             color: #F8F5F2;
         }
 
@@ -277,7 +281,7 @@
             border-radius: 15px;
             padding: 1.5rem;
             box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            border-top: 4px solid #9F8FAD; /* Mindful Mauve */
+            border-top: 4px solid #E89D9D; /* Hopeful Coral */
         }
 
         .card-header {
@@ -288,7 +292,8 @@
 
         .card-icon {
             font-size: 1.5rem;
-            margin-right: 0.5rem;
+            margin-right: 0.75rem;
+            color: #E89D9D;
         }
 
         .card-title {
@@ -329,7 +334,7 @@
 
         .action-btn {
             background: #F8F5F2; /* Calm Beige */
-            color: #9F8FAD; /* Mindful Mauve */
+            color: #E89D9D; /* Hopeful Coral */
             border: 1px solid #D1D1D1; /* Subtle Gray */
             padding: 1rem;
             border-radius: 10px;
@@ -368,7 +373,7 @@
 
         .content-thumbnail {
             height: 150px;
-            background: #9F8FAD; /* Mindful Mauve */
+            background: #E89D9D; /* Hopeful Coral */
             display: flex;
             align-items: center;
             justify-content: center;
@@ -411,7 +416,7 @@
         }
 
         .new-post-btn {
-            background: #9F8FAD; /* Mindful Mauve */
+            background: #E89D9D; /* Hopeful Coral */
             color: #F8F5F2;
             border: none;
             padding: 0.8rem 1.5rem;
@@ -422,7 +427,7 @@
         }
         .new-post-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(159, 143, 173, 0.4);
+            box-shadow: 0 5px 15px rgba(232, 157, 157, 0.4);
         }
 
         .forum-post {
@@ -431,7 +436,7 @@
             padding: 1.5rem;
             margin-bottom: 1rem;
             box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            border-left: 4px solid #9F8FAD; /* Mindful Mauve */
+            border-left: 4px solid #E89D9D; /* Hopeful Coral */
         }
 
         .post-header {
@@ -451,7 +456,7 @@
             width: 40px;
             height: 40px;
             border-radius: 50%;
-            background: #9F8FAD; /* Mindful Mauve */
+            background: #E89D9D; /* Hopeful Coral */
             display: flex;
             align-items: center;
             justify-content: center;
@@ -478,9 +483,12 @@
             gap: 0.3rem;
             transition: color 0.3s;
         }
+        .post-action i {
+            margin-right: 5px;
+        }
 
         .post-action:hover {
-            color: #9F8FAD; /* Mindful Mauve */
+            color: #E89D9D; /* Hopeful Coral */
         }
 
         /* AI Chat */
@@ -497,12 +505,15 @@
         }
 
         .chat-header {
-            background: #9F8FAD; /* Mindful Mauve */
+            background: #E89D9D; /* Hopeful Coral */
             color: #F8F5F2;
             padding: 1rem;
             display: flex;
             align-items: center;
-            gap: 0.5rem;
+            gap: 0.75rem;
+        }
+        .chat-header i {
+            font-size: 1.2rem;
         }
 
         .chat-messages {
@@ -530,7 +541,7 @@
         }
 
         .message.user {
-            background: #9F8FAD; /* Mindful Mauve */
+            background: #E89D9D; /* Hopeful Coral */
             color: #F8F5F2;
             align-self: flex-end;
             border-bottom-right-radius: 5px;
@@ -555,11 +566,11 @@
         }
 
         .chat-input:focus {
-            border-color: #9F8FAD; /* Mindful Mauve */
+            border-color: #E89D9D; /* Hopeful Coral */
         }
 
         .send-btn {
-            background: #9F8FAD; /* Mindful Mauve */
+            background: #E89D9D; /* Hopeful Coral */
             color: #F8F5F2;
             border: none;
             border-radius: 50%;
@@ -639,7 +650,7 @@
         .text-center { text-align: center; }
         .mb-2 { margin-bottom: 2rem; }
         .mt-2 { margin-top: 2rem; }
-        #wellnessScore { color: #9F8FAD !important; }
+        #wellnessScore { color: #E89D9D !important; }
         .forum-post .post-header span {
             background: #D1D1D1;
             color: #3E3E3E;
@@ -665,7 +676,7 @@
         <main class="main-content">
             <div id="welcome" class="screen active">
                 <div class="welcome-card">
-                    <div class="welcome-icon">🌟</div>
+                    <div class="welcome-icon"><i class="bi bi-flower1"></i></div>
                     <h1 class="welcome-title">Welcome to MindBridge</h1>
                     <p class="welcome-subtitle">A safe, anonymous, and supportive platform for Indian students to prioritize their mental wellness.</p>
                     <div class="privacy-notice">
@@ -690,14 +701,14 @@
                 <h2 class="welcome-title text-center mb-2">Your Personal Dashboard</h2>
                 <div class="dashboard-grid">
                     <div class="dashboard-card">
-                        <div class="card-header"><span class="card-icon">📊</span><span class="card-title">Wellness Score</span></div>
+                        <div class="card-header"><i class="bi bi-heart-pulse-fill card-icon"></i><span class="card-title">Wellness Score</span></div>
                         <div style="text-align: center; margin: 1rem 0;">
                             <div id="wellnessScore" style="font-size: 2.5rem; font-weight: bold;">--/27</div>
                             <div id="wellnessMessage" style="color: #5A5A5A;">Complete the assessment to see your score.</div>
                         </div>
                     </div>
                     <div class="dashboard-card">
-                        <div class="card-header"><span class="card-icon">😊</span><span class="card-title">Daily Mood Check</span></div>
+                        <div class="card-header"><i class="bi bi-emoji-smile card-icon"></i><span class="card-title">Daily Mood Check</span></div>
                         <div class="mood-tracker">
                             <div class="mood-option" onclick="selectMood(this, 1)"> <span class="mood-emoji">😢</span> <div>Poor</div> </div>
                             <div class="mood-option" onclick="selectMood(this, 2)"> <span class="mood-emoji">😟</span> <div>Low</div> </div>
@@ -707,7 +718,7 @@
                         </div>
                     </div>
                     <div class="dashboard-card">
-                        <div class="card-header"><span class="card-icon">🚀</span><span class="card-title">Quick Actions</span></div>
+                        <div class="card-header"><i class="bi bi-magic card-icon"></i><span class="card-title">Quick Actions</span></div>
                         <div class="quick-actions">
                             <button class="action-btn" onclick="showScreen('content', event)">Browse Resources</button>
                             <button class="action-btn" onclick="showScreen('chat', event)">Talk to AI</button>
@@ -722,7 +733,7 @@
                 <h2 class="welcome-title text-center mb-2">Guided Resources & Exercises</h2>
                 <div class="content-grid">
                     <div class="content-card" onclick="openContent('breathing')">
-                        <div class="content-thumbnail">🫁</div>
+                        <div class="content-thumbnail"><i class="bi bi-wind"></i></div>
                         <div class="content-info">
                             <h3 class="content-title">5-Minute Breathing Exercise</h3>
                             <p class="content-description">Quick stress relief technique perfect for before exams or presentations.</p>
@@ -730,7 +741,7 @@
                         </div>
                     </div>
                     <div class="content-card" onclick="openContent('anxiety')">
-                        <div class="content-thumbnail">🧠</div>
+                        <div class="content-thumbnail"><i class="bi bi-puzzle"></i></div>
                         <div class="content-info">
                             <h3 class="content-title">Managing Exam Anxiety</h3>
                             <p class="content-description">CBT-based techniques to overcome test anxiety and improve performance.</p>
@@ -738,7 +749,7 @@
                         </div>
                     </div>
                     <div class="content-card" onclick="openContent('sleep')">
-                        <div class="content-thumbnail">🌙</div>
+                        <div class="content-thumbnail"><i class="bi bi-moon-stars"></i></div>
                         <div class="content-info">
                             <h3 class="content-title">Better Sleep for Students</h3>
                             <p class="content-description">Evidence-based sleep hygiene tips for better rest and focus.</p>
@@ -746,7 +757,7 @@
                         </div>
                     </div>
                     <div class="content-card" onclick="openContent('mindfulness')">
-                        <div class="content-thumbnail">🧘</div>
+                        <div class="content-thumbnail"><i class="bi bi-peace"></i></div>
                         <div class="content-info">
                             <h3 class="content-title">Mindfulness for Students</h3>
                             <p class="content-description">Learn to stay present and reduce overwhelm with daily mindfulness.</p>
@@ -767,7 +778,10 @@
                         <span>Exam Stress</span>
                     </div>
                     <div class="post-content">I have my final exams starting next week and I'm feeling overwhelmed. I've been studying but I keep thinking I'm not prepared enough. Anyone else going through something similar?</div>
-                    <div class="post-actions"><span class="post-action">👍 24</span><span class="post-action">💬 15</span></div>
+                    <div class="post-actions">
+                        <span class="post-action"><i class="bi bi-hand-thumbs-up"></i> 24</span>
+                        <span class="post-action"><i class="bi bi-chat-dots"></i> 15</span>
+                    </div>
                 </div>
                 <div class="forum-post">
                     <div class="post-header">
@@ -775,19 +789,28 @@
                         <span>Success Story</span>
                     </div>
                     <div class="post-content">Just wanted to share that I finally talked to my parents about my struggles with anxiety. They were much more understanding than I expected! Sometimes the conversations we dread the most are the ones we need the most. 💙</div>
-                    <div class="post-actions"><span class="post-action">👍 51</span><span class="post-action">💬 8</span></div>
+                    <div class="post-actions">
+                        <span class="post-action"><i class="bi bi-hand-thumbs-up"></i> 51</span>
+                        <span class="post-action"><i class="bi bi-chat-dots"></i> 8</span>
+                    </div>
                 </div>
             </div>
 
             <div id="chat" class="screen">
                 <div class="chat-container">
-                    <div class="chat-header"><span>🤖</span><div><div style="font-weight: 600;">MindBridge AI Assistant</div><div style="font-size: 0.8rem; opacity: 0.8;">Always here to listen</div></div></div>
+                    <div class="chat-header">
+                        <i class="bi bi-chat-heart"></i>
+                        <div>
+                            <div style="font-weight: 600;">MindBridge AI Assistant</div>
+                            <div style="font-size: 0.8rem; opacity: 0.8;">Always here to listen</div>
+                        </div>
+                    </div>
                     <div class="chat-messages" id="chatMessages">
                         <div class="message bot">Hi there! I'm your MindBridge AI companion. How are you feeling today?</div>
                     </div>
                     <div class="chat-input-container">
                         <input type="text" class="chat-input" id="chatInput" placeholder="Type your message here..." onkeypress="handleChatKeyPress(event)">
-                        <button class="send-btn" onclick="sendMessage()">➤</button>
+                        <button class="send-btn" onclick="sendMessage()"><i class="bi bi-arrow-right"></i></button>
                     </div>
                 </div>
             </div>
@@ -837,10 +860,9 @@
             document.getElementById(screenName).classList.add('active');
             
             document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
-            if (event && event.target.classList.contains('nav-btn')) {
-                event.target.classList.add('active');
+            if (event && event.target.closest('.nav-btn')) {
+                event.target.closest('.nav-btn').classList.add('active');
             } else {
-                // Handle cases where event is not passed (e.g., after assessment)
                 const targetBtn = document.querySelector(`.nav-btn[onclick*="'${screenName}'"]`);
                 if(targetBtn) targetBtn.classList.add('active');
             }
