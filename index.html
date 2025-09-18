@@ -20,10 +20,9 @@
 
         body {
             font-family: 'Quicksand', sans-serif;
-            /* --- MODIFIED: Added gradient background --- */
-            background: linear-gradient(to bottom right, #F8F5F2, #EFEAE4); /* Transition from Calm Beige to Soft Linen */
+            background: #F8F5F2; /* Set a simple, solid base color */
             min-height: 100vh;
-            color: #5A5A5A; /* Slate Gray - Body Text */
+            color: #5A5A5A;
             display: flex;
             flex-direction: column;
         }
@@ -32,7 +31,8 @@
             max-width: 1600px; 
             margin: 0 auto;
             width: 100%; 
-            background: #F8F5F2; /* Keep app-container background solid for contrast */
+            /* --- MODIFIED: Gradient moved here and made more visible --- */
+            background: linear-gradient(160deg, #F1E6E4, #F8F5F2);
             position: relative;
             flex-grow: 1;
             display: flex;
@@ -41,7 +41,7 @@
 
         /* Header */
         .header {
-            background: #E89D9D; /* Hopeful Coral */
+            background: #E89D9D;
             color: #F8F5F2; 
             padding: 1rem 2rem;
             display: flex;
@@ -116,7 +116,7 @@
             max-width: 600px;
             margin: 3rem auto;
             padding: 3rem;
-            background: #EFEAE4; /* Soft Linen */
+            background: #EFEAE4;
             border-radius: 20px;
             box-shadow: 0 20px 40px rgba(0,0,0,0.05);
         }
@@ -129,21 +129,21 @@
 
         .welcome-title {
             font-size: 2.5rem;
-            color: #3E3E3E; /* Charcoal */
+            color: #3E3E3E;
             margin-bottom: 1rem;
             font-weight: 700;
         }
 
         .welcome-subtitle {
             font-size: 1.2rem;
-            color: #5A5A5A; /* Slate Gray */
+            color: #5A5A5A;
             margin-bottom: 2rem;
             line-height: 1.6;
         }
 
         .privacy-notice {
             background: #F8F5F2; 
-            border: 1px solid #D1D1D1; /* Subtle Gray */
+            border: 1px solid #D1D1D1;
             border-radius: 10px;
             padding: 1rem;
             margin: 2rem 0;
