@@ -4,7 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MindBridge - Student Mental Health Platform</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
     <style>
         * {
             margin: 0;
@@ -13,34 +19,41 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #F8F5F2; /* Calm Beige - Main Background */
+            font-family: 'Quicksand', sans-serif;
+            /* --- MODIFIED: Added gradient background --- */
+            background: linear-gradient(to bottom right, #F8F5F2, #EFEAE4); /* Transition from Calm Beige to Soft Linen */
             min-height: 100vh;
             color: #5A5A5A; /* Slate Gray - Body Text */
+            display: flex;
+            flex-direction: column;
         }
 
         .app-container {
-            max-width: 1200px;
+            max-width: 1600px; 
             margin: 0 auto;
-            min-height: 100vh;
-            background: #F8F5F2; /* Calm Beige - Main Background */
+            width: 100%; 
+            background: #F8F5F2; /* Keep app-container background solid for contrast */
             position: relative;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
         }
 
         /* Header */
         .header {
-            background: #E89D9D; /* Hopeful Coral - NEW Accent */
-            color: #F8F5F2; /* Calm Beige for text on accent */
+            background: #E89D9D; /* Hopeful Coral */
+            color: #F8F5F2; 
             padding: 1rem 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
             box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            flex-shrink: 0;
         }
 
         .logo {
             font-size: 1.5rem;
-            font-weight: bold;
+            font-weight: 700;
             display: flex;
             align-items: center;
         }
@@ -61,10 +74,15 @@
             background: transparent;
             border: 1px solid #F8F5F2;
             color: #F8F5F2;
-            padding: 0.5rem 1rem;
+            padding: 0.5rem 1.2rem;
             border-radius: 20px;
             cursor: pointer;
             transition: all 0.3s;
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
 
         .nav-btn:hover, .nav-btn.active {
@@ -75,7 +93,7 @@
         /* Main Content Area */
         .main-content {
             padding: 2rem;
-            min-height: calc(100vh - 80px);
+            flex-grow: 1;
         }
 
         .screen {
@@ -98,7 +116,7 @@
             max-width: 600px;
             margin: 3rem auto;
             padding: 3rem;
-            background: #EFEAE4; /* Soft Linen - Section Background */
+            background: #EFEAE4; /* Soft Linen */
             border-radius: 20px;
             box-shadow: 0 20px 40px rgba(0,0,0,0.05);
         }
@@ -111,21 +129,21 @@
 
         .welcome-title {
             font-size: 2.5rem;
-            color: #3E3E3E; /* Charcoal - Headings */
+            color: #3E3E3E; /* Charcoal */
             margin-bottom: 1rem;
             font-weight: 700;
         }
 
         .welcome-subtitle {
             font-size: 1.2rem;
-            color: #5A5A5A; /* Slate Gray - Body Text */
+            color: #5A5A5A; /* Slate Gray */
             margin-bottom: 2rem;
             line-height: 1.6;
         }
 
         .privacy-notice {
-            background: #F8F5F2; /* Calm Beige */
-            border: 1px solid #D1D1D1; /* Subtle Gray - Borders */
+            background: #F8F5F2; 
+            border: 1px solid #D1D1D1; /* Subtle Gray */
             border-radius: 10px;
             padding: 1rem;
             margin: 2rem 0;
@@ -133,21 +151,22 @@
         }
 
         .privacy-notice h4 {
-            color: #3E3E3E; /* Charcoal - Headings */
+            color: #3E3E3E; 
             margin-bottom: 0.5rem;
         }
 
         .cta-button {
-            background: #E89D9D; /* Hopeful Coral */
+            background: #E89D9D; 
             color: #F8F5F2;
             border: none;
             padding: 1rem 2rem;
             border-radius: 25px;
             font-size: 1.1rem;
-            font-weight: 600;
+            font-weight: 700;
             cursor: pointer;
             transition: all 0.3s;
             box-shadow: 0 4px 15px rgba(232, 157, 157, 0.4);
+            font-family: 'Quicksand', sans-serif;
         }
 
         .cta-button:hover {
@@ -164,7 +183,7 @@
         .progress-bar {
             width: 100%;
             height: 8px;
-            background: #D1D1D1; /* Subtle Gray */
+            background: #D1D1D1; 
             border-radius: 4px;
             margin-bottom: 2rem;
             overflow: hidden;
@@ -172,21 +191,21 @@
 
         .progress-fill {
             height: 100%;
-            background: #E89D9D; /* Hopeful Coral */
+            background: #E89D9D;
             transition: width 0.3s ease;
         }
 
         .question-card {
-            background: #EFEAE4; /* Soft Linen */
+            background: #EFEAE4; 
             border-radius: 15px;
             padding: 2rem;
             margin-bottom: 2rem;
             box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            border-left: 5px solid #E89D9D; /* Hopeful Coral */
+            border-left: 5px solid #E89D9D; 
         }
 
         .question-number {
-            color: #E89D9D; /* Hopeful Coral */
+            color: #E89D9D; 
             font-size: 0.9rem;
             font-weight: 600;
             margin-bottom: 0.5rem;
@@ -194,7 +213,7 @@
 
         .question-text {
             font-size: 1.3rem;
-            color: #3E3E3E; /* Charcoal */
+            color: #3E3E3E; 
             margin-bottom: 2rem;
             line-height: 1.5;
         }
@@ -206,8 +225,8 @@
         }
 
         .option {
-            background: #F8F5F2; /* Calm Beige */
-            border: 2px solid #D1D1D1; /* Subtle Gray */
+            background: #F8F5F2; 
+            border: 2px solid #D1D1D1; 
             border-radius: 10px;
             padding: 1rem;
             cursor: pointer;
@@ -217,13 +236,13 @@
         }
 
         .option:hover {
-            background: #EFEAE4; /* Soft Linen */
-            border-color: #E89D9D; /* Hopeful Coral */
+            background: #EFEAE4; 
+            border-color: #E89D9D; 
         }
 
         .option.selected {
-            background: #EFEAE4; /* Soft Linen */
-            border-color: #E89D9D; /* Hopeful Coral */
+            background: #EFEAE4; 
+            border-color: #E89D9D; 
             color: #3E3E3E;
         }
 
@@ -241,14 +260,15 @@
         }
 
         .nav-button {
-            background: #D1D1D1; /* Subtle Gray */
+            background: #D1D1D1; 
             color: #3E3E3E;
             border: none;
             padding: 0.8rem 1.5rem;
             border-radius: 8px;
             cursor: pointer;
-            font-weight: 600;
+            font-weight: 700;
             transition: all 0.3s;
+            font-family: 'Quicksand', sans-serif;
         }
         .nav-button:disabled {
             opacity: 0.5;
@@ -260,7 +280,7 @@
         }
 
         .nav-button.primary {
-            background: #E89D9D; /* Hopeful Coral */
+            background: #E89D9D; 
             color: #F8F5F2;
         }
 
@@ -277,11 +297,11 @@
         }
 
         .dashboard-card {
-            background: #EFEAE4; /* Soft Linen */
+            background: #EFEAE4; 
             border-radius: 15px;
             padding: 1.5rem;
             box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            border-top: 4px solid #E89D9D; /* Hopeful Coral */
+            border-top: 4px solid #E89D9D; 
         }
 
         .card-header {
@@ -298,8 +318,8 @@
 
         .card-title {
             font-size: 1.2rem;
-            font-weight: 600;
-            color: #3E3E3E; /* Charcoal */
+            font-weight: 700;
+            color: #3E3E3E; 
         }
 
         .mood-tracker {
@@ -316,7 +336,7 @@
             transition: all 0.3s;
         }
         .mood-option.selected, .mood-option:hover {
-            background: #F8F5F2; /* Calm Beige */
+            background: #F8F5F2; 
         }
 
 
@@ -333,14 +353,15 @@
         }
 
         .action-btn {
-            background: #F8F5F2; /* Calm Beige */
-            color: #E89D9D; /* Hopeful Coral */
-            border: 1px solid #D1D1D1; /* Subtle Gray */
+            background: #F8F5F2; 
+            color: #E89D9D; 
+            border: 1px solid #D1D1D1; 
             padding: 1rem;
             border-radius: 10px;
             cursor: pointer;
-            font-weight: 600;
+            font-weight: 700;
             transition: all 0.3s;
+            font-family: 'Quicksand', sans-serif;
         }
 
         .action-btn:hover {
@@ -358,7 +379,7 @@
         }
 
         .content-card {
-            background: #EFEAE4; /* Soft Linen */
+            background: #EFEAE4; 
             border-radius: 15px;
             overflow: hidden;
             box-shadow: 0 10px 30px rgba(0,0,0,0.05);
@@ -373,7 +394,7 @@
 
         .content-thumbnail {
             height: 150px;
-            background: #E89D9D; /* Hopeful Coral */
+            background: #E89D9D; 
             display: flex;
             align-items: center;
             justify-content: center;
@@ -387,13 +408,13 @@
 
         .content-title {
             font-size: 1.1rem;
-            font-weight: 600;
+            font-weight: 700;
             margin-bottom: 0.5rem;
-            color: #3E3E3E; /* Charcoal */
+            color: #3E3E3E; 
         }
 
         .content-description {
-            color: #5A5A5A; /* Slate Gray */
+            color: #5A5A5A; 
             font-size: 0.9rem;
             line-height: 1.4;
             margin-bottom: 1rem;
@@ -416,14 +437,15 @@
         }
 
         .new-post-btn {
-            background: #E89D9D; /* Hopeful Coral */
+            background: #E89D9D; 
             color: #F8F5F2;
             border: none;
             padding: 0.8rem 1.5rem;
             border-radius: 8px;
             cursor: pointer;
-            font-weight: 600;
+            font-weight: 700;
             transition: all 0.3s;
+            font-family: 'Quicksand', sans-serif;
         }
         .new-post-btn:hover {
             transform: translateY(-2px);
@@ -431,12 +453,12 @@
         }
 
         .forum-post {
-            background: #EFEAE4; /* Soft Linen */
+            background: #EFEAE4; 
             border-radius: 15px;
             padding: 1.5rem;
             margin-bottom: 1rem;
             box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            border-left: 4px solid #E89D9D; /* Hopeful Coral */
+            border-left: 4px solid #E89D9D; 
         }
 
         .post-header {
@@ -450,30 +472,33 @@
             display: flex;
             align-items: center;
             gap: 0.5rem;
+            font-weight: 600;
         }
 
         .author-avatar {
             width: 40px;
             height: 40px;
             border-radius: 50%;
-            background: #E89D9D; /* Hopeful Coral */
+            background: #E89D9D; 
             display: flex;
             align-items: center;
             justify-content: center;
             color: #F8F5F2;
-            font-weight: bold;
+            font-weight: 700;
         }
 
         .post-content {
             line-height: 1.6;
             margin-bottom: 1rem;
+            font-weight: 500;
         }
 
         .post-actions {
             display: flex;
             gap: 1rem;
-            color: #5A5A5A; /* Slate Gray */
+            color: #5A5A5A; 
             font-size: 0.9rem;
+            font-weight: 600;
         }
 
         .post-action {
@@ -488,7 +513,7 @@
         }
 
         .post-action:hover {
-            color: #E89D9D; /* Hopeful Coral */
+            color: #E89D9D; 
         }
 
         /* AI Chat */
@@ -498,19 +523,20 @@
             height: 70vh;
             display: flex;
             flex-direction: column;
-            background: #EFEAE4; /* Soft Linen */
+            background: #EFEAE4; 
             border-radius: 15px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.05);
             overflow: hidden;
         }
 
         .chat-header {
-            background: #E89D9D; /* Hopeful Coral */
+            background: #E89D9D; 
             color: #F8F5F2;
             padding: 1rem;
             display: flex;
             align-items: center;
             gap: 0.75rem;
+            font-weight: 600;
         }
         .chat-header i {
             font-size: 1.2rem;
@@ -534,14 +560,14 @@
         }
 
         .message.bot {
-            background: #F8F5F2; /* Calm Beige */
-            color: #3E3E3E; /* Charcoal */
+            background: #F8F5F2; 
+            color: #3E3E3E; 
             align-self: flex-start;
             border-bottom-left-radius: 5px;
         }
 
         .message.user {
-            background: #E89D9D; /* Hopeful Coral */
+            background: #E89D9D; 
             color: #F8F5F2;
             align-self: flex-end;
             border-bottom-right-radius: 5px;
@@ -549,28 +575,29 @@
 
         .chat-input-container {
             padding: 1rem;
-            border-top: 1px solid #D1D1D1; /* Subtle Gray */
+            border-top: 1px solid #D1D1D1; 
             display: flex;
             gap: 1rem;
         }
 
         .chat-input {
             flex: 1;
-            border: 1px solid #D1D1D1; /* Subtle Gray */
+            border: 1px solid #D1D1D1; 
             background-color: #F8F5F2;
             border-radius: 25px;
             padding: 0.8rem 1rem;
             font-size: 1rem;
             outline: none;
             transition: border-color 0.3s;
+            font-family: 'Quicksand', sans-serif;
         }
 
         .chat-input:focus {
-            border-color: #E89D9D; /* Hopeful Coral */
+            border-color: #E89D9D; 
         }
 
         .send-btn {
-            background: #E89D9D; /* Hopeful Coral */
+            background: #E89D9D; 
             color: #F8F5F2;
             border: none;
             border-radius: 50%;
@@ -602,7 +629,7 @@
             animation: fadeIn 0.3s;
         }
         .modal-content {
-            background: #EFEAE4; /* Soft Linen */
+            background: #EFEAE4; 
             padding: 2rem;
             border-radius: 15px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.2);
@@ -612,11 +639,11 @@
         }
         .modal-title {
             font-size: 1.5rem;
-            color: #3E3E3E; /* Charcoal */
+            color: #3E3E3E; 
             margin-bottom: 1rem;
         }
         .modal-message {
-            color: #5A5A5A; /* Slate Gray */
+            color: #5A5A5A; 
             margin-bottom: 2rem;
             line-height: 1.6;
         }
@@ -628,11 +655,12 @@
         .modal-textarea {
             width: 100%;
             min-height: 100px;
-            border: 1px solid #D1D1D1; /* Subtle Gray */
+            border: 1px solid #D1D1D1; 
             border-radius: 8px;
             padding: 0.8rem;
             font-size: 1rem;
             margin-bottom: 1rem;
+            font-family: 'Quicksand', sans-serif;
         }
 
         /* Responsive Design */
@@ -665,11 +693,11 @@
         <header class="header">
             <div class="logo">MindBridge</div>
             <nav class="nav-menu">
-                <button class="nav-btn active" onclick="showScreen('welcome', event)">Home</button>
-                <button class="nav-btn" onclick="showScreen('dashboard', event)">Dashboard</button>
-                <button class="nav-btn" onclick="showScreen('content', event)">Resources</button>
-                <button class="nav-btn" onclick="showScreen('community', event)">Community</button>
-                <button class="nav-btn" onclick="showScreen('chat', event)">AI Support</button>
+                <button class="nav-btn active" onclick="showScreen('welcome', event)"><i class="bi bi-house-door-fill"></i> Home</button>
+                <button class="nav-btn" onclick="showScreen('dashboard', event)"><i class="bi bi-grid-1x2-fill"></i> Dashboard</button>
+                <button class="nav-btn" onclick="showScreen('content', event)"><i class="bi bi-book-fill"></i> Resources</button>
+                <button class="nav-btn" onclick="showScreen('community', event)"><i class="bi bi-people-fill"></i> Community</button>
+                <button class="nav-btn" onclick="showScreen('chat', event)"><i class="bi bi-chat-heart-fill"></i> AI Support</button>
             </nav>
         </header>
 
@@ -774,7 +802,7 @@
                 </div>
                 <div class="forum-post">
                     <div class="post-header">
-                        <div class="post-author"><div class="author-avatar">A</div><div><div style="font-weight: 600;">Anonymous_47</div><div style="font-size: 0.8rem; color: #5A5A5A;">2 hours ago</div></div></div>
+                        <div class="post-author"><div class="author-avatar">A</div><div><div>Anonymous_47</div><div style="font-size: 0.8rem; font-weight: 500; color: #5A5A5A;">2 hours ago</div></div></div>
                         <span>Exam Stress</span>
                     </div>
                     <div class="post-content">I have my final exams starting next week and I'm feeling overwhelmed. I've been studying but I keep thinking I'm not prepared enough. Anyone else going through something similar?</div>
@@ -785,7 +813,7 @@
                 </div>
                 <div class="forum-post">
                     <div class="post-header">
-                        <div class="post-author"><div class="author-avatar">S</div><div><div style="font-weight: 600;">Sunshine_23</div><div style="font-size: 0.8rem; color: #5A5A5A;">5 hours ago</div></div></div>
+                        <div class="post-author"><div class="author-avatar">S</div><div><div>Sunshine_23</div><div style="font-size: 0.8rem; font-weight: 500; color: #5A5A5A;">5 hours ago</div></div></div>
                         <span>Success Story</span>
                     </div>
                     <div class="post-content">Just wanted to share that I finally talked to my parents about my struggles with anxiety. They were much more understanding than I expected! Sometimes the conversations we dread the most are the ones we need the most. 💙</div>
@@ -801,8 +829,8 @@
                     <div class="chat-header">
                         <i class="bi bi-chat-heart"></i>
                         <div>
-                            <div style="font-weight: 600;">MindBridge AI Assistant</div>
-                            <div style="font-size: 0.8rem; opacity: 0.8;">Always here to listen</div>
+                            <div>MindBridge AI Assistant</div>
+                            <div style="font-size: 0.8rem; opacity: 0.8; font-weight: 500;">Always here to listen</div>
                         </div>
                     </div>
                     <div class="chat-messages" id="chatMessages">
